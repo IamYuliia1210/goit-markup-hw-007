@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Студія</title>
+
+     <!--------------------- FONTS ----------------------> 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+
+     <!--------------------- NORMALIZE ------------------> 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -18,23 +22,34 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!--------------------- CSS-STYLE --------------------> 
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
+    <!--------------------- HEADER ----------------------> 
     <header class="header">
       <div class="container header-container">
+
+        <!---------------------NAVIGATION-----------------------> 
         <nav class="header-nav">
           <a class="header-nav-logo" href="./index.html" lang="en">
-            <span class="logo">Web</span>Studio</a
-          >
+            <span class="logo">Web</span>Studio</a>
           <ul class="header-nav-list">
-            <li><a class="header-nav-link is-active" href="./index.html">Studio</a></li>
+            <li>
+              <a class="header-nav-link is-active" href="./index.html">Studio</a>
+            </li>
             <li>
               <a class="header-nav-link " href="./portfolio.html">Portfolio</a>
             </li>
-            <li><a class="header-nav-link" href="#">Contacts</a></li>
+            <li>
+              <a class="header-nav-link" href="#">Contacts</a>
+            </li>
           </ul>
         </nav>
+        
+        <!---------------------CONTACTS-----------------------> 
         <ul class="header-contacts">
           <li class="header-item">
             <a class="header-contact-link" href="maito:info@devstudio.com">
@@ -48,9 +63,91 @@
           </li>
         </ul>
       </div>
+
+      <!-------------------- MOBILE MENU -----------------------> 
+        <div class="container mobile-wrap">
+          <a class="header-nav-logo" href="./index.html" lang="en">
+            <span class="logo">Web</span>Studio</a
+          >
+          <button type="button" 
+            class="button-menu is-open" 
+            aria-expanded="false"  
+            aria-controls=""
+            data-modal-open
+          >
+            <svg 
+              width="32"
+              height="22"
+              aria-label="switch mobile menu"
+            >
+              <use class="icon-cross" href="./images/symbol-defs.svg#icon-cross"></use>
+              <use class="icon-burger" href="./images/symbol-defs.svg#icon-burger"></use>
+            </svg>
+          </button>
+
+          <!--------  MODAL-MOBILE ----------> 
+          <div class="backdrop is-hidden" data-modal>
+            <button type="button" class="menu-button" data-modal-close>
+              <svg>
+                <use href="./images/symbol-defs.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="menu-wrap">
+              <ul>
+                <li>Studio</li>
+                <li>Portfolio</li>
+                <li>Contacts</li>
+              </ul>
+               <!----  MOBILE-CONTACTS -----> 
+              <ul class="menu-contacts">
+                <li class="menu-item">
+                  <a class="menu-contact-link" href="maito:info@devstudio.com">
+                   info@devstudio.com
+                 </a>
+                </li>
+                <li class="menu-item">
+                   <a class="menu-contact-link" href="tel.:+110001111111">
+                   +11 (000) 111-11-11
+                  </a>
+                </li>
+              </ul>
+               <!----  MOBILE-SOCIAL -----> 
+              <ul ul class="footer-social-list">
+                <li class="footer-social-item">
+                  <a class="footer-social-link" href="https://www.instagram.com/" target="_blank" rel="noopeer noreferrer" title="перейти на сторінку instagram">
+                    <svg class="footer-icon">
+                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item">
+                  <a class="footer-social-link" href="https://twitter.com/" target="_blank" rel="noopeer noreferrer" title="перейти на сторінку instagram">
+                    <svg class="footer-icon">
+                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+               </li>
+                <li class="footer-social-item">
+                  <a class="footer-social-link" href="https://www.facebook.com/" target="_blank" rel="noopeer noreferrer" title="перейти на сторінку instagram">
+                    <svg class="footer-icon">
+                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="footer-social-item">
+                  <a class="footer-social-link" href="https://www.linkedin.com/" target="_blank" rel="noopeer noreferrer" title="перейти на сторінку instagram">
+                    <svg class="footer-icon">
+                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
     </header>
 
-    <!-- шапка -->
+    <!--------------------- HERO ------------------------> 
     <main>
       <section class="hero">
         <div class="container">
@@ -62,8 +159,7 @@
         </div>
       </section>
 
-      <!--особенности-->
-
+      <!--------------------- FEATURES -------------------> 
       <section class="features">
         <div class="container">
           <h2 class="features-title visually-hidden">Features</h2>
@@ -120,8 +216,7 @@
         </div>
       </section>
 
-      <!-- род деятельности-->
-
+      <!--------------------- WORKS ----------------------> 
       <section class="work">
         <div class="container">
           <h2 class="work-title">What are we doing</h2>
@@ -150,8 +245,7 @@
         </div>
       </section>
 
-      <!--команда -->
-
+      <!--------------------- TEAM ----------------------> 
       <section class="team">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
@@ -328,9 +422,8 @@
         </div>
       </section>
 
-      <!-- клиенты -->
-
-      <section class="clients">
+      <!--------------------- CLIENTS -------------------> 
+      <!-- <section class="clients">
         <div class="container">
           <h2 class="clients-title">Customers</h2>
           <ul class="clients-list">
@@ -379,10 +472,10 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main> -->
 
-    <!--Футер-->
-    <footer class="footer">
+    <!--------------------- FOOTER ----------------------> 
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <div class="footer-wrap">
           <a class="footer-logo" href="./index.html" lang="en">
@@ -397,28 +490,28 @@
             <li class="footer-social-item">
               <a class="footer-social-link" href="https://www.instagram.com/" target="_blank" rel="noopeer noreferrer" title="перейти на сторінку instagram">
                  <svg class="footer-icon">
-                   <use  href="./images/symbol-defs.svg#icon-instagram"></use>
+                   <use href="./images/symbol-defs.svg#icon-instagram"></use>
                   </svg>
               </a>
             </li>
             <li class="footer-social-item">
               <a class="footer-social-link" href="https://twitter.com/" target="_blank" rel="noopeer noreferrer" title="перейти на сторінку instagram">
                   <svg class="footer-icon">
-                    <use  href="./images/symbol-defs.svg#icon-twitter"></use>
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
                   </svg>
               </a>
             </li>
             <li class="footer-social-item">
               <a class="footer-social-link" href="https://www.facebook.com/" target="_blank" rel="noopeer noreferrer" title="перейти на сторінку instagram">
                 <svg class="footer-icon">
-                  <use  href="./images/symbol-defs.svg#icon-facebook"></use>
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="footer-social-item">
               <a class="footer-social-link" href="https://www.linkedin.com/" target="_blank" rel="noopeer noreferrer" title="перейти на сторінку instagram">
                 <svg class="footer-icon">
-                  <use  href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -427,8 +520,8 @@
          <div class="footer-form">
           <b class="form-title">Subscribe</b>
           <form class="form" name="subscribe-form" autocomplete="on">
-             <input type="email" name="email" placeholder="E-mail">
-             <button type="submit" class="form-button">
+             <input name="email" type="email" placeholder="E-mail">
+             <button class="form-button" type="submit" >
               <span class="footer-label">Subscribe</span>
                 <svg class="button-icon" width="24" height="24">
                   <use href="./images/symbol-defs.svg#icon-icon-send"></use>
@@ -437,54 +530,56 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
-
-    <!-- Модальное окно-->
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-            <button type="button" class="hero-btn-close" data-modal-close>
-                <svg class="modal-close-icon">
-                    <use href="./images/symbol-defs.svg#icon-close-black"></use>
+    <!-- ------------------- MODAL-WINDOW -----------------> 
+    <!-- <div class="backdrop is-hidden" data-modal>
+      <div class="modal"> -->
+      <!---------BUTTON-------> 
+        <!-- <button class="hero-btn-close" type="button" data-modal-close>
+          <svg class="modal-close-icon">
+            <use href="./images/symbol-defs.svg#icon-close-black"></use>
+          </svg>
+        </button> -->
+      <!---------FORM-------> 
+        <!-- <p class="modal-title">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="modal-form_group">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <span class="modal-field">
+                <input class="form-input" name="name" id="name" type="text" >
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#icon-person"></use>
                 </svg>
-            </button>
-            <p class="modal-title">Leave your contacts and we will call you back</p>
-            <form class="modal-form">
-              <div class="modal-form_group">
-                <div class="form-field">
-                <label for="name">Name</label>
-                <span class="modal-field">
-                  <input type="text" class="form-input" name="name" id="name">
+              </span>
+            </div>
+            <div class="form-field">
+              <label for="tel">Phone</label>
+              <span class="modal-field">
+                <input class="form-input" name="tel" id="tel" type="tel">
+                <svg class="modal-icon" width="18" height="18">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+              </span>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <span class="modal-field">
+                <input class="form-input" name="email" id="email" type="email">
                   <svg class="modal-icon" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#icon-person"></use>
-                  </svg>
-                </span>
-              </div>
-              <div class="form-field">
-                <label for="tel">Phone</label>
-                <span class="modal-field">
-                <input type="tel" class="form-input" name="tel" id="tel">
-                <svg class="modal-icon" width="18" height="18">
-                    <use href="./images/symbol-defs.svg#icon-phone"></use>
-                  </svg>
-                </span>
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <span class="modal-field">
-                <input type="email" class="form-input" name="email" id="email">
-                <svg class="modal-icon" width="18" height="18">
                     <use href="./images/symbol-defs.svg#icon-email"></use>
                   </svg>
-                </span>
-              </div> 
-              <div class="form-field">
-                <label for="comment">Comment</label>
-                <textarea name="comment" class="form-textarea" id="comment"  placeholder="Text input"></textarea>
-              </div> 
-              </div>
-              <div class="form-checkbox">
-                <input type="checkbox" class="checkbox-input hide" name="policy" value="" id="policy">
+              </span>
+            </div> 
+            <div class="form-field">
+              <label for="comment">Comment</label>
+              <textarea class="form-textarea" name="comment" id="comment"  placeholder="Text input"></textarea>
+            </div> 
+          </div> -->
+              <!---------CHECKBOX-------> 
+              <!-- <div class="form-checkbox">
+                <input  class="checkbox-input hide" name="policy" id="policy" type="checkbox" value="">
                 <label for="policy" class="checkbox-text">
                   <span>
                     <svg class="check-icon">
@@ -492,13 +587,15 @@
                     </svg>
                   </span>
                   I accept the terms and conditions of the
-                  <a href="/" class="policy-condisions">Privacy Policy</a></label>
+                  <a class="policy-condisions" href="/">Privacy Policy</a></label>
               </div>
-             
-              <button type="submit" class="modal-btn_send">Відправити</button>
+              <button class="modal-btn_send" type="submit">Send</button>
             </form>
+        </div>
     </div>
-  
+   -->
+    <!------------------ JavaScript ------------------>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/model.js"></script>
   </body>
 </html>
